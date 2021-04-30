@@ -57,6 +57,8 @@ jobs:
         environment_name: nether-web
         # Version label for new Beanstalk version
         version_label: 0
+        # Version description for the new Beanstalk version
+        version_description: "testing first action"
         # Zip file with the version to deploy. If skipped the action will deploy existing version.
         deployment_package: nether/deploy.zip
     
