@@ -36,6 +36,9 @@ jobs:
     
     - name: Generate deployment package
       run: zip -r deploy.zip * -x "**node_modules**" -x '*.git*'
+    
+    - name: DEBUG LS
+      run: ls
       
     - name: Beanstalk Deploy
       # You may pin to the exact commit or the version.
