@@ -50,7 +50,7 @@ jobs:
         # AWS Secret Key
         aws_secret_key: ${{secrets.AWS_SECRET_KEY}}
         # AWS Region
-        region: af-south-1
+        region: us-east-2
         # Beanstalk application name
         application_name: nether-web
         # Beanstalk environment name. If empty a version will be created but not deployed anywhere.
