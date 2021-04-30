@@ -35,8 +35,11 @@ jobs:
     - run: npm test
     
     - name: Generate deployment package
-      run: zip -r deploy.zip * -x "**node_modules**" -x '*.git*'
+      run: zip -r /artifacts/deploy.zip * -x "**node_modules**" -x '*.git*'
     
+    - name: DEBUG LS
+      run: ls
+      
     - name: DEBUG LS
       run: ls
       
@@ -58,5 +61,5 @@ jobs:
         # Version label for new Beanstalk version
         version_label: ${{ github.sha }}
         # Zip file with the version to deploy. If skipped the action will deploy existing version.
-        deployment_package: deploy.zip
+        deployment_package: /artifacts/deploy.zip
     
